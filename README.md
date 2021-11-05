@@ -43,3 +43,34 @@ watchDropzone(div, (droppedFiles) => {
   console.log(droppedFiles); // The files that have been dropped
 });
 ```
+
+## Use the files of a input as background image of a element
+If you use the `createBackgroundImageConnection()` method, you can create a connection between a file input and a HTML element. When a file is added to the input, the file will be used as background image of the HTML element.
+
+```javascript
+import { createBackgroundImageConnection } from 'awesome-file-input-watcher';
+
+const input = document.querySelector('input');
+const div = document.querySelector('div');
+
+createBackgroundImageConnection(input, div);
+```
+
+In this example, if the input receive a image file, this image file will be used as background image of the <div> element. And if the file change, the background image of the <div> element will be change too.
+
+With `createBackgroundImageConnection()` you can define an CSS style that will be applied to the element when the input receive a file.
+
+```javascript
+import { createBackgroundImageConnection } from 'awesome-file-input-watcher';
+
+const input = document.querySelector('input');
+const div = document.querySelector('div');
+
+createBackgroundImageConnection(input, div, {
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  width: '500px',
+  height: '500px'
+});
+```
