@@ -1,8 +1,14 @@
 # Awesome File Input Watcher
 
 ## Installation
+If you use NPM:
 ```
 npm i awesome-file-input-watcher
+```
+
+If you use Yarn:
+```
+yarn add awesome-file-input-watcher
 ```
 
 ## Get files from a normal file input
@@ -43,6 +49,47 @@ watchDropzone(div, (droppedFiles) => {
   console.log(droppedFiles); // The files that have been dropped
 });
 ```
+
+## Get files without using inputs
+To get files without using already created file inputs, use the `getFileWithoutInput()` function. 
+
+This method receives a function as a parameter that will be called when choosing the file and will receive the chosen file as a parameter.
+
+```javascript
+import { getFileWithoutInput } from 'awesome-file-input-watcher';
+
+const button = document.querySelector('button');
+
+function doSomething(file) {
+  console.log(file) // The file
+
+  // ...
+};
+
+button.addEventListener('click', () => {
+  getFileWithoutInput(doSomething)
+});
+```
+
+If you want to get **more than one file**, you need to use the `getFilesWithoutInput()` method.
+
+```javascript
+import { getFilesWithoutInput } from 'awesome-file-input-watcher';
+
+const button = document.querySelector('button');
+
+function doSomething(file) {
+  console.log(file) // The file
+
+  // ...
+};
+
+button.addEventListener('click', () => {
+  getFilesWithoutInput(doSomething)
+});
+```
+
+**Warning**: The file choice popup will only open if the action that activates the method was performed by the user
 
 ## Use the files of a input as background image of a element
 If you use the `createBackgroundImageConnection()` method, you can create a connection between a file input and a HTML element. When a file is added to the input, the file will be used as background image of the HTML element.
