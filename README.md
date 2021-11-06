@@ -105,7 +105,7 @@ createBackgroundImageConnection(input, div);
 
 In this example, if the input receive a image file, this image file will be used as background image of the <div> element. And if the file change, the background image of the <div> element will be change too.
 
-With `createBackgroundImageConnection()` you can define an CSS style that will be applied to the element when the input receive a file.
+With `createBackgroundImageConnection()` you can define a CSS style that will be applied to the element when the input receive a file.
 
 ```javascript
 import { createBackgroundImageConnection } from 'awesome-file-input-watcher';
