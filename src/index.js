@@ -4,6 +4,7 @@ import watchDropzone from './methods/watchDropzone.js';
 import createBackgroundImageConnection from './methods/createBackgroundImageConnection.js';
 import getFileWithoutInput from './methods/getFileWithoutInput.js';
 import getFilesWithoutInput from './methods/getFilesWithoutInput.js';
+import fetchDifferentOriginFile from './methods/fetchDifferentOriginFile.js';
 
 export {
   watchInput,
@@ -11,5 +12,6 @@ export {
   watchDropzone,
   createBackgroundImageConnection,
   getFileWithoutInput,
-  getFilesWithoutInput
+  getFilesWithoutInput,
+  fetchDifferentOriginFile
 };
