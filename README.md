@@ -121,3 +121,38 @@ createBackgroundImageConnection(input, div, {
   height: '500px'
 });
 ```
+
+## Fetch files located at different origin URLs
+Normally, you can't download files located a different origin URLs just inserting a "download" attribute in a HTML anchor.
+
+With the `fetchDifferentOriginFile()` method, you can do this just passing the URL of the content as parameter to the function.
+
+```javascript
+import { fetchDifferentOriginFile } from 'awesome-file-input-watcher';
+
+let button = document.querySelector('button');
+
+let url = 'Some URL';
+
+button.addEventListener('click', () => fetchDifferentOriginFile(url));
+```
+
+The `fetchDifferentOriginFile()` accepts the *filename* and *file extension* as parameters (if you don't type them, default values will be used and the file extension will be automatically generated).
+
+*The presence of the URL parameter is mandatory.*
+
+```javascript
+import { fetchDifferentOriginFile } from 'awesome-file-input-watcher';
+
+let button = document.querySelector('button');
+
+let url = 'Some URL';
+let filename = 'some_filename';
+let file_extension = '.jpg';
+
+button.addEventListener('click', () => fetchDifferentOriginFile(
+  url,
+  filename,
+  file_extension
+));
+```

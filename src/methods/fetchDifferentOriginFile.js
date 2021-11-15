@@ -1,4 +1,9 @@
 async function fetchDifferentOriginFile (url, filename='file', extension='') {
+  if (!url) {
+    console.log('Please, inform the URL to use fetchDifferentOriginFile method.')
+    return;
+  };
+
   let response = await fetch(url);
   let blob = await response.blob();
   let objectURL = URL.createObjectURL(blob);
