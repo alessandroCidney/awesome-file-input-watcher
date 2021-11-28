@@ -19,3 +19,5 @@ async function fetchDifferentOriginFile (url, filename='file', extension='') {
 
   document.body.removeChild(a);
 };
+
+export default fetchDifferentOriginFile;

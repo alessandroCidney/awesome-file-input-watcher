@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/alessandroCidney/awesome-file-input-watcher/issues"
   },
-  "homepage": "https://github.com/alessandroCidney/awesome-file-input-watcher#readme"
+  "homepage": "https://github.com/alessandroCidney/awesome-file-input-watcher#readme",
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  }
 }
