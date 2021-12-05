@@ -5,6 +5,7 @@ import createBackgroundImageConnection from './methods/createBackgroundImageConn
 import getFileWithoutInput from './methods/getFileWithoutInput.js';
 import getFilesWithoutInput from './methods/getFilesWithoutInput.js';
 import fetchDifferentOriginFile from './methods/fetchDifferentOriginFile.js';
+import readAndDisplayImage from './methods/readAndDisplayImage.js';
 
 export {
   watchInput,
@@ -13,5 +14,6 @@ export {
   createBackgroundImageConnection,
   getFileWithoutInput,
   getFilesWithoutInput,
-  fetchDifferentOriginFile
+  fetchDifferentOriginFile,
+  readAndDisplayImage
 };

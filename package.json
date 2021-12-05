@@ -1,6 +1,6 @@
 {
   "name": "awesome-file-input-watcher",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A incredible way to watch file inputs and get the files when they change.",
   "main": "src/index.js",
   "scripts": {
