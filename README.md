@@ -156,3 +156,47 @@ button.addEventListener('click', () => fetchDifferentOriginFile(
   file_extension
 ));
 ```
+
+## Display images in a region with an image file
+If you have an image file, you can display it using the `readAndDisplayImage()` method.
+
+```javascript
+import { readAndDisplayImage } from 'awesome-file-input-watcher';
+
+let input = document.querySelector('input');
+let div = document.querySelector('div');
+
+input.addEventListener('change', (event) => {
+  let file = event.target.files[0];
+
+  readAndDisplayImage(file, div);
+});
+```
+
+If you want to add custom styles to the region that will receive the image as background you can pass a custom styles object as third parameter.
+
+```javascript
+import { readAndDisplayImage } from 'awesome-file-input-watcher';
+
+let input = document.querySelector('input');
+let div = document.querySelector('div');
+
+input.addEventListener('change', (event) => {
+  let file = event.target.files[0];
+
+  readAndDisplayImage(file, div, {
+    backgroundPosition: 'bottom',
+    backgroundSize: 'cover',
+    width: '200px',
+    height: '300px'
+  });
+});
+```
+
+**Default styles that will be applied to background image**
+
+| Property | Value |
+| -------- | ----- |
+| background-position | center |
+| background-size | cover |
+| background-repeat | no-repeat |
