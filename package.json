@@ -1,0 +1,36 @@
+{
+  "name": "awesome-file-input-watcher",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "expose:cmd": "mv -v dist/* ./",
+    "dev:browser": "webpack --mode=development --watch --progress",
+    "build:browser": "webpack --mode=production",
+    "build:typescript": "rm -rf ./dist/esm && tsc",
+    "prepublishOnly": "webpack --mode=production && npm run expose:cmd",
+    "build": "npm run build:typescript && npm run build:browser"
+  },
+  "exports": {
+    ".": "./dist/esm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^39.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "*",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

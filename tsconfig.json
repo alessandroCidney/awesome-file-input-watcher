@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["@types", "./node_modules/@types"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "outDir": "dist/esm",
+    "baseUrl": "./",
+    "declaration": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+  },
+  "include": ["webpack.config.cjs", "src/**/*"],
+}
